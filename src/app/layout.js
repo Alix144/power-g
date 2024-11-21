@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import "./globals.css";
 import { Poppins } from 'next/font/google';
 
@@ -16,8 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`h-screen bg-gradient-to-t from-primary to-lightBlue ${poppins.className}`}>
-        <div className="mx-auto w-[90%] sm:w-[70%] h-full">{children}</div>
+      <body className={`sm:h-screen bg-gradient-to-t from-primary to-lightBlue ${poppins.className}`}>
+        <div className="mx-auto w-[90%] sm:w-[80%] h-full">
+          <Header/>
+          {children}
+          </div>
       </body>
     </html>
   );
