@@ -6,10 +6,34 @@
     @apply px-3 py-1 bg-secondary text-primary hover:bg-[#FFFF00] duration-200
 }
 
+.danger-btn-style{
+    @apply px-3 py-1 bg-danger hover:bg-[#FF3E3E] text-white duration-200
+}
+
+.white-btn-style{
+    @apply px-3 py-1 bg-[#ffffff66] hover:bg-[#ffffff88] text-white duration-200
+}
+
 h1{
     @apply text-secondary font-bold text-3xl
 }
 
+h2{
+    @apply text-secondary text-xl
+}
+
+h3{
+    @apply text-white font-semibold text-xl
+}
+
 p{
     @apply text-white
+}
+
+form p{
+    @apply text-sm
+}
+
+input{
+    @apply px-3 bg-[#ffffff66]  text-white focus:border-white
 }

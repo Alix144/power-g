@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`sm:h-screen bg-gradient-to-t from-primary to-lightBlue ${poppins.className}`}>
+      <body className={`sm:h-screen bg-gradient-to-t from-primary to-lightBlue ${poppins.className} relative`}>
         <div className="mx-auto w-[90%] sm:w-[80%] h-full">
           <Header/>
           {children}
