@@ -1,5 +1,4 @@
 import NameForm from "@/components/NameForm";
-import { addName } from "./actions";
 import DeleteForm from "@/components/DeleteForm";
 
 const from = async () => {
@@ -9,7 +8,7 @@ const from = async () => {
         <div className="w-full h-full">
             <h1>what is your name?</h1>
            
-            <NameForm addName={addName}/>
+            <NameForm/>
 
             <div>
                 {names?.map((name)=>(

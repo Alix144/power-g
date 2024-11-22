@@ -2,10 +2,10 @@
 import FormBtn from "./FormBtn";
 import { useFormStatus } from 'react-dom'
 import LoadingSpinner from "./LoadingSpinner";
+import { addName } from "@/app/form/actions";
 
-const NameForm = ({ addName }) => {
+const NameForm = () => {
     const { pending } = useFormStatus()
-    console.log(pending)
   return (
     <form action={addName}>
       <input name="name" type="text" disabled={pending && true}/>
