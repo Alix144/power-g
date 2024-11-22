@@ -5,7 +5,13 @@ const Names = async() => {
     const data = await fetch(`${process.env.DOMAIN_NAME}/api/name`, {
         cache: "force-cache",
       });
-      const names = await data.json();
+      let names=[];
+      if (!data.ok) {
+        names = []
+    }else{
+
+        names = await data.json();
+    }
   return (
     <div>
       {names ? (
