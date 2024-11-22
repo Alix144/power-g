@@ -2,7 +2,7 @@ import NameForm from "@/components/NameForm";
 import DeleteForm from "@/components/DeleteForm";
 
 const from = async () => {
-    const data = await fetch("http://localhost:3000/api/name", {cache: "force-cache"})
+    const data = await fetch(`${process.env.DOMAIN_NAME}/api/name`, {cache: "force-cache"})
     const names = await data.json()
     return ( 
         <div className="w-full h-full">
