@@ -1,29 +1,17 @@
 import DeleteForm from "@/components/DeleteForm";
-import LoadingSpinner from "@/components/LoadingSpinner";
+import Name from "@/lib/models/Name";
 
-const Names = async() => {
-    const data = await fetch(`${process.env.DOMAIN_NAME}/api/name`, {
-        cache: "force-cache",
-      });
-      let names=[];
-      if (!data.ok) {
-        names = []
-    }else{
-
-        names = await data.json();
-    }
+const Names = async () => {
+  const names = await Name.find();
+  
   return (
     <div>
-      {names ? (
-        names?.map((name) => (
-          <div key={name._id} className="flex gap-3 my-5">
-            <h3>{name.name}</h3>
-            <DeleteForm nameId={name._id} />
-          </div>
-        ))
-      ) : (
-        <LoadingSpinner />
-      )}
+      {names?.map((name) => (
+        <div key={name._id} className="flex gap-3 my-5">
+          <h3>{name.name}</h3>
+          <DeleteForm nameId={name._id.toString()} />
+        </div>
+      ))}
     </div>
   );
 };
