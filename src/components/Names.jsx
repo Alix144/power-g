@@ -2,9 +2,9 @@ import DeleteForm from "@/components/DeleteForm";
 import Name from "@/lib/models/Name";
 
 const Names = async () => {
-  const data = await fetch("https://power-g.vercel.app/api/name", {cache: "force-cache"})
+  const data = await fetch("https://online-store-one-phi.vercel.app/api/users", {cache: "force-cache"})
   const names = await data.json()
-
+ 
   return (
     <div>
       {names?.map((name) => (
