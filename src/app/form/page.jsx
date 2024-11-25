@@ -6,7 +6,7 @@ const formPage = async () => {
     <div className="w-full h-full">
       <h1>what is your name?</h1>
 
-      <NameForm />
+      {/* <NameForm /> */}
       <Names />
     </div>
   );
