@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 
-const clientPage = () => {
+const ClientPage = () => {
     const [names, setNames] = useState(null)
 
     const getNames = async() => {
@@ -19,7 +19,7 @@ const clientPage = () => {
 
     useEffect(()=>{
         getNames()
-    },[])
+    })
 
     return ( 
         <div className="w-full h-full">
@@ -34,4 +34,4 @@ const clientPage = () => {
      );
 }
  
-export default clientPage;
+export default ClientPage;
