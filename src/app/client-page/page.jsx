@@ -19,7 +19,7 @@ const ClientPage = () => {
 
     useEffect(()=>{
         getNames()
-    })
+    },[])
 
     return ( 
         <div className="w-full h-full">
